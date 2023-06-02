@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> hi, FUCK THE WORLD. bye.</title>
+    <style>
+        body {
+            background-color: #FFFFFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .header {
+            text-align: center;
+            font-family: "楷体", "KaiTi", serif;
+            font-size: 40px;
+            opacity: 0;
+            animation: fadeIn 1.8s ease forwards;
+        }
+
+        img {
+            width: 40px;
+            height: auto;
+            opacity: 0;
+            animation: fadeIn 1.8s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        body.fadeOut {
+            animation: fadeOut 1s ease forwards;
+        }
+
+        @keyframes fadeOut {
+            0% {
+                background-color: #FFFFFF;
+            }
+            100% {
+                background-color: #98fb98;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        hi, FUCK THE WORLD. bye.
+        <img src="IMG_1812.jpeg" alt="图片">
+    </div>
+
+    <script>
+        setTimeout(function() {
+            document.body.classList.add('fadeOut');
+        }, 1000); // 3秒后添加类名，启动背景动画
+    </script>
+</body>
+</html>
